@@ -43,3 +43,41 @@ function sum(){
 
 const result=sum();
 console.log(result);
+
+// Loop through school to print each student’s name, grade, and subject marks in a clear, formatted way.
+//  The output should look like:
+// Grade 10 - Ayaan: math = 82, science = 76
+// Grade 10 - Sara: math = 95, science = 89
+// Grade 11 - Rahul: math = 78, science = 85
+// Grade 11 - Meena: math = 88, science = 92
+
+const school = {
+  name: "Sunrise High School",
+  address: {
+    city: "Junagadh",
+    state: "Gujarat",
+  },
+  classes: [
+    {
+      grade: 10,
+      students: [
+        { name: "Ayaan", marks: { math: 82, science: 76 } },
+        { name: "Sara", marks: { math: 95, science: 89 } }
+      ]
+    },
+    {
+      grade: 11,
+      students: [
+        { name: "Rahul", marks: { math: 78, science: 85 } },
+        { name: "Meena", marks: { math: 88, science: 92 } }
+      ]
+    }
+  ]
+};
+
+for (const cls of school.classes) {
+  for (const student of cls.students) {
+    const marks = Object.entries(student.marks);
+    console.log("Grade " + cls.grade +" - " + student.name +" : " + marks);
+  }
+}
