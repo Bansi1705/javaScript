@@ -81,3 +81,33 @@ for (const cls of school.classes) {
     console.log("Grade " + cls.grade +" - " + student.name +" : " + marks);
   }
 }
+
+school.classes.forEach(classObj => {
+  const grade = classObj.grade;
+  classObj.students.forEach(student => {
+    const marks = student.marks;
+    console.log(
+      `Grade ${grade} - ${student.name}: math = ${marks.math}, science = ${marks.science}`
+    );
+  });
+});
+
+
+// 13-8-2025 task 
+
+const users = [
+  { name: 'Alice', age: 30, active: true },
+  { name: 'Bob', age: 25, active: false },
+  { name: 'Charlie', age: 30, active: true },
+  { name: 'David', age: 25, active: true }
+];
+
+function getActiveUsers(userlist){
+   for(let i=0;i<=userlist.length;i++){
+    if(userlist[i].active==true)
+    {
+      console.log(userlist[i].name);
+    }
+   }
+}
+getActiveUsers(users);
