@@ -37,6 +37,95 @@ console.log(user.age);
 console.log(user["isStudent"]);
 console.log(user["email address"]);
 
+// operatores:
+
+// let a=10;
+// let b=20;
+// const c=30;
+
+a='hello';
+b=true;
+
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+console.log(a+b);
+console.log(typeof a+b);
+
+let x =5;
+let y=10;
+
+if(x>2 && y<20){
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+
+let isStudent="true";
+if(isStudent!=false){
+    console.log("true");
+}
+
+// string methods 
+
+// let a = "UltraJavaScriptLanguage";
+// let b = a.slice(9,15);
+// console.log(b);
+
+const srt="hello world";
+let length=srt.length;
+let at=srt.at(5);
+let charat=srt.charAt(5);
+console.log(at);
+console.log(charat);
+console.log(length);
+
+let text = "HELLO WORLD";
+let codeat = text.charCodeAt(0);
+let code = text.codePointAt(0);
+console.log(codeat);
+console.log(code);
+
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+console.log(text3);
+
+let slice=text3.slice(-4,-3);
+console.log(slice);
+
+let str = "Apple,Banana, Kiwi";
+let part = str.substring(6, 13);
+console.log(part);
+
+let text4 = "5";
+let padded = text4.padEnd(4,"b");
+console.log(padded);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let splice=fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(splice);
+let myList = fruits.at(2);
+fruits.copyWithin(2, 0,2);
+console.log(fruits);
+fruits.length=2;
+console.log(fruits);
+console.log(myList);
+
+// array methods:
+
+//  let arr = [1, 2, 3, 4, 5];
+
+// let sliced = arr.slice(1, 3);
+// let spliced = arr.splice(1, 3);
+
+// console.log(sliced); 
+// console.log(spliced); 
+// console.log(arr); 
+
+// functions :
+
 function sum(){
     return 5+5;
 }
@@ -44,6 +133,117 @@ function sum(){
 const result=sum();
 console.log(result);
 
+// function greet()
+// {
+//     console.log("hello");
+// }
+
+// greet();
+
+// const person={
+//     name:"bansi",
+
+//     greet : function(){
+//         console.log("hello World");
+//     }
+// }
+
+// person.greet();
+
+// const person = {
+//    name:"bansi",
+//    age:17,
+//    address:{
+//     street:"abc",
+//     city:"keshod",
+//     state:123,
+//    },
+//    status:"student",
+// };
+
+// console.log(person.address.city);
+
+// const array =[
+//    ["alice",22,"math"],
+//    ["bob",22,["History","Physics"]],
+//    ["Chalie",22,"Science"],
+// ]
+// console.log(array[1][2][1]);
+
+//loops:
+
+// for(let i=0;i<5;i++)
+// {
+//     console.log(i);
+// }
+
+// // interview question
+// let j=0;
+// while(j<10){
+//     console.log(j);
+//     j++;
+// }
+
+// do{
+//     console.log("Do block runs...",j);
+// }while(j<5);
+
+
+// for(let i=1;i<=10;i++)
+// {
+//     console.log("5 x " + i + " = " + (5 * i));
+// }
+
+// const students = [
+//   { name: "Ayaan", marks: 75 },
+//   { name: "Sara", marks: 92 },
+//   { name: "Rahul", marks: 68 },
+//   { name: "Meena", marks: 88 }
+// ];
+
+// for(let i=0;i<students.length;i++){
+// if(students[i].marks>=80)
+// {
+//     console.log(students[i].name);
+// }
+// }
+
+// for(let i=10;i>0;i--){
+//     console.log(i);
+// }
+
+
+// for (let i = 0; i < 3; i++) {
+//   let row = "";
+//   for (let j = 0; j < 3; j++) {
+//     row += "* ";
+//   }
+//   console.log(row);
+// }
+const users = [
+  { name: 'Alice', age: 30, active: true },
+  { name: 'Bob', age: 25, active: false },
+  { name: 'Charlie', age: 30, active: true },
+  { name: 'David', age: 25, active: true }
+];
+
+function getActiveUsers(userlist){
+   for(let i=0;i<userlist.length;i++){
+    if(userlist[i].active===true)
+    {
+      console.log(userlist[i].name);
+    }
+   }
+}
+getActiveUsers(users);
+
+
+const students = [
+  { name: "Ayaan", scores: { math: 78, science: 85, english: 90 } },
+  { name: "Sara",  scores: { math: 88, science: 82, english: 95 } },
+  { name: "Rahul", scores: { math: 92, science: 78, english: 88 } },
+  { name: "Meena", scores: { math: 85, science: 90, english: 85 } }
+];
 // Loop through school to print each student’s name, grade, and subject marks in a clear, formatted way.
 //  The output should look like:
 // Grade 10 - Ayaan: math = 82, science = 76
@@ -82,6 +282,7 @@ for (const cls of school.classes) {
   }
 }
 
+// given by sir
 school.classes.forEach(classObj => {
   const grade = classObj.grade;
   classObj.students.forEach(student => {
@@ -92,22 +293,16 @@ school.classes.forEach(classObj => {
   });
 });
 
+// destructure:
 
-// 13-8-2025 task 
+// const user = {
+//   name: "Alice",
+//   address: {
+//     city: "Wonderland",
+//     country: "Fantasy",
+//   },
+// };
 
-const users = [
-  { name: 'Alice', age: 30, active: true },
-  { name: 'Bob', age: 25, active: false },
-  { name: 'Charlie', age: 30, active: true },
-  { name: 'David', age: 25, active: true }
-];
+// let {address : {city}} = user;
+// console.log(city);
 
-function getActiveUsers(userlist){
-   for(let i=0;i<=userlist.length;i++){
-    if(userlist[i].active==true)
-    {
-      console.log(userlist[i].name);
-    }
-   }
-}
-getActiveUsers(users);
