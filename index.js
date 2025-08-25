@@ -1,36 +1,36 @@
 //nn ss bb u primitive data type
-let a=10;
-let b=null;
-let c=true;
-let d=BigInt("567");
-let e="javascript";
-let i="javascript";
+let a = 10;
+let b = null;
+let c = true;
+let d = BigInt("567");
+let e = "javascript";
+let i = "javascript";
 
-let f=Symbol("js");
-let h=Symbol("js");
+let f = Symbol("js");
+let h = Symbol("js");
 let g;
 
-console.log(a,b,c,d,e,f,g);
-console.log(e==i);
-console.log(f==h);
+console.log(a, b, c, d, e, f, g);
+console.log(e == i);
+console.log(f == h);
 
-console.log(BigInt("567")+BigInt("3"));
-console.log(typeof(a));
+console.log(BigInt("567") + BigInt("3"));
+console.log(typeof a);
 console.log("js running");
 
 //non primitive
 
-const arr=[1,2,3,4,5];
-const arr2=["one","two"];
+const arr = [1, 2, 3, 4, 5];
+const arr2 = ["one", "two"];
 
 console.log(arr[2]);
 
-const user={
-    username:"john",
-    age:25,
-    isStudent:true,
-    hobbies:["Reading"]["drawing"],
-    "email address":"test@test.com",
+const user = {
+  username: "john",
+  age: 25,
+  isStudent: true,
+  hobbies: ["Reading"]["drawing"],
+  "email address": "test@test.com",
 };
 
 console.log(user.age);
@@ -43,40 +43,39 @@ console.log(user["email address"]);
 // let b=20;
 // const c=30;
 
-a='hello';
-b=true;
+a = "hello";
+b = true;
 
 console.log(typeof a);
 console.log(typeof b);
 console.log(typeof c);
-console.log(a+b);
-console.log(typeof a+b);
+console.log(a + b);
+console.log(typeof a + b);
 
-let x =5;
-let y=10;
+let x = 5;
+let y = 10;
 
-if(x>2 && y<20){
-    console.log("true");
-}
-else{
-    console.log("false");
-}
-
-let isStudent="true";
-if(isStudent!=false){
-    console.log("true");
+if (x > 2 && y < 20) {
+  console.log("true");
+} else {
+  console.log("false");
 }
 
-// string methods 
+let isStudent = "true";
+if (isStudent != false) {
+  console.log("true");
+}
+
+// string methods
 
 // let a = "UltraJavaScriptLanguage";
 // let b = a.slice(9,15);
 // console.log(b);
 
-const srt="hello world";
-let length=srt.length;
-let at=srt.at(5);
-let charat=srt.charAt(5);
+const srt = "hello world";
+let length = srt.length;
+let at = srt.at(5);
+let charat = srt.charAt(5);
 console.log(at);
 console.log(charat);
 console.log(length);
@@ -92,7 +91,7 @@ let text2 = "World";
 let text3 = text1.concat(" ", text2);
 console.log(text3);
 
-let slice=text3.slice(-4,-3);
+let slice = text3.slice(-4, -3);
 console.log(slice);
 
 let str = "Apple,Banana, Kiwi";
@@ -100,16 +99,16 @@ let part = str.substring(6, 13);
 console.log(part);
 
 let text4 = "5";
-let padded = text4.padEnd(4,"b");
+let padded = text4.padEnd(4, "b");
 console.log(padded);
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let splice=fruits.splice(2, 0, "Lemon", "Kiwi");
+let splice = fruits.splice(2, 0, "Lemon", "Kiwi");
 console.log(splice);
 let myList = fruits.at(2);
-fruits.copyWithin(2, 0,2);
+fruits.copyWithin(2, 0, 2);
 console.log(fruits);
-fruits.length=2;
+fruits.length = 2;
 console.log(fruits);
 console.log(myList);
 
@@ -120,18 +119,17 @@ console.log(myList);
 // let sliced = arr.slice(1, 3);
 // let spliced = arr.splice(1, 3);
 
-// console.log(sliced); 
-// console.log(spliced); 
-// console.log(arr); 
+// console.log(sliced);
+// console.log(spliced);
+// console.log(arr);
 
 // functions :
 
-function sum(){
-    return 5+5;
-}
-
-const result=sum();
-console.log(result);
+// function sum(){
+//     return 5+5;
+// }
+// const result=sum();
+// console.log(result);
 
 // function greet()
 // {
@@ -188,7 +186,6 @@ console.log(result);
 //     console.log("Do block runs...",j);
 // }while(j<5);
 
-
 // for(let i=1;i<=10;i++)
 // {
 //     console.log("5 x " + i + " = " + (5 * i));
@@ -212,7 +209,6 @@ console.log(result);
 //     console.log(i);
 // }
 
-
 // for (let i = 0; i < 3; i++) {
 //   let row = "";
 //   for (let j = 0; j < 3; j++) {
@@ -221,29 +217,27 @@ console.log(result);
 //   console.log(row);
 // }
 const users = [
-  { name: 'Alice', age: 30, active: true },
-  { name: 'Bob', age: 25, active: false },
-  { name: 'Charlie', age: 30, active: true },
-  { name: 'David', age: 25, active: true }
+  { name: "Alice", age: 30, active: true },
+  { name: "Bob", age: 25, active: false },
+  { name: "Charlie", age: 30, active: true },
+  { name: "David", age: 25, active: true },
 ];
 
-function getActiveUsers(userlist){
-   for(let i=0;i<userlist.length;i++){
-    if(userlist[i].active===true)
-    {
+function getActiveUsers(userlist) {
+  for (let i = 0; i < userlist.length; i++) {
+    if (userlist[i].active === true) {
       console.log(userlist[i].name);
     }
-   }
+  }
 }
 getActiveUsers(users);
 
-
-const students = [
-  { name: "Ayaan", scores: { math: 78, science: 85, english: 90 } },
-  { name: "Sara",  scores: { math: 88, science: 82, english: 95 } },
-  { name: "Rahul", scores: { math: 92, science: 78, english: 88 } },
-  { name: "Meena", scores: { math: 85, science: 90, english: 85 } }
-];
+// const students = [
+//   { name: "Ayaan", scores: { math: 78, science: 85, english: 90 } },
+//   { name: "Sara",  scores: { math: 88, science: 82, english: 95 } },
+//   { name: "Rahul", scores: { math: 92, science: 78, english: 88 } },
+//   { name: "Meena", scores: { math: 85, science: 90, english: 85 } }
+// ];
 // Loop through school to print each student’s name, grade, and subject marks in a clear, formatted way.
 //  The output should look like:
 // Grade 10 - Ayaan: math = 82, science = 76
@@ -262,30 +256,30 @@ const school = {
       grade: 10,
       students: [
         { name: "Ayaan", marks: { math: 82, science: 76 } },
-        { name: "Sara", marks: { math: 95, science: 89 } }
-      ]
+        { name: "Sara", marks: { math: 95, science: 89 } },
+      ],
     },
     {
       grade: 11,
       students: [
         { name: "Rahul", marks: { math: 78, science: 85 } },
-        { name: "Meena", marks: { math: 88, science: 92 } }
-      ]
-    }
-  ]
+        { name: "Meena", marks: { math: 88, science: 92 } },
+      ],
+    },
+  ],
 };
 
 for (const cls of school.classes) {
   for (const student of cls.students) {
     const marks = Object.entries(student.marks);
-    console.log("Grade " + cls.grade +" - " + student.name +" : " + marks);
+    console.log("Grade " + cls.grade + " - " + student.name + " : " + marks);
   }
 }
 
 // given by sir
-school.classes.forEach(classObj => {
+school.classes.forEach((classObj) => {
   const grade = classObj.grade;
-  classObj.students.forEach(student => {
+  classObj.students.forEach((student) => {
     const marks = student.marks;
     console.log(
       `Grade ${grade} - ${student.name}: math = ${marks.math}, science = ${marks.science}`
@@ -306,3 +300,77 @@ school.classes.forEach(classObj => {
 // let {address : {city}} = user;
 // console.log(city);
 
+// 23-08-2025 live session
+
+// function firstLetter(str) {
+//   let str2 = str.split(" ");
+//   let arr = [];
+//   for (let i = 0; i < str2.length; i++) {
+//     let capital = str2[i].charAt(0).toUpperCase();
+//     arr.push(capital);
+//   }
+//   let result = arr.join("");
+//   console.log(result);
+// }
+// let str = "hello world bansi mirali";
+// let a = firstLetter(str);
+
+// function firstLetter(str) {
+//   return str
+//     .split(" ")
+//     .map((upper) => upper.charAt(0).toUpperCase())
+//     .join("");
+// }
+
+// let str = "hello world bansi mirali";
+// let a = firstLetter(str);
+// console.log(a);
+
+// second task
+const input = [
+  {
+    name: "John",
+    age: 13,
+  },
+  {
+    name: "Mark",
+    age: 56,
+  },
+  {
+    name: "Rachel",
+    age: 45,
+  },
+  {
+    name: "Nate",
+    age: 67,
+  },
+  {
+    name: "Jennifer",
+    age: 65,
+  },
+];
+
+let Age = input.map((a) => a.age);
+
+let Max = Math.max(...Age);
+let Min = Math.min(...Age);
+
+let dif = Max - Min;
+console.log(dif);
+
+// third task
+const students = [
+  { name: "Alice", scores: [90, 85, 92] },
+  { name: "Bob", scores: [75, 80, 85] },
+  { name: "Charlie", scores: [90, 95, 85] },
+  { name: "Jack", scores: [100, 100, 100] },
+];
+
+let output = students.map((a) => {
+  let total = a.scores.reduce((sum, scores) => sum + scores, 0);
+  return { name: a.name, total: total };
+});
+
+let result = output.filter((a) => a.total > 250);
+
+console.log(result);
