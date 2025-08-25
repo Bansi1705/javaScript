@@ -351,9 +351,14 @@ const input = [
 ];
 
 let Age = input.map((a) => a.age);
+console.log(Age);
 
 let Max = Math.max(...Age);
+console.log(Max);
+
 let Min = Math.min(...Age);
+console.log(Min);
+
 
 let dif = Max - Min;
 console.log(dif);
